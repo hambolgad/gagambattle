@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controls & Instructions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('pictures/instructions-background.jpg') no-repeat center center/cover;
+      background-size: 100% 100%;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffcc33;
+      text-shadow: 3px 3px 5px #000;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: left;
+      backdrop-filter: blur(6px);
+    }
+
+    .box h2 {
+      text-align: center;
+      color: #ffcc33;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .game-controls {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      color: #00ffcc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>CONTROLS & INSTRUCTIONS</h1>
+    <div class="container">
+      
+      <!-- Instructions -->
+      <div class="box">
+        <h2>INSTRUCTIONS</h2>
+        <ul>
+          <li>Each player selects a spider champion.</li>
+          <li>The spiders are placed on opposite ends of a string.</li>
+          <li>To move and attack, you must <span class="highlight">“fast click”</span> the keys.</li>
+          <li>The goal is to push the opponent's spider off the string.</li>
+          <li>Victory is declared when one spider falls or is forced to retreat to its starting position.</li>
+        </ul>
+      </div>
+
+      <!-- Game Controls -->
+      <div class="box game-controls">
+        <h2>GAME CONTROLS</h2>
+        <p><b>Player 1:</b> Use the <span class="highlight">'W'</span> key.</p>
+        <p><b>Player 2:</b> Use the <span class="highlight">'UP ARROW'</span> key.</p>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url("pictures/HOMEPAGE.png") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .settings-container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .settings-container h1 {
+      margin-bottom: 20px;
+    }
+
+    .toggle {
+      margin: 10px 0;
+      padding: 10px;
+      background: #222;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle:hover {
+      background: #444;
+    }
+
+    .back-arrow {
+      margin-top: 20px;
+    }
+
+    .back-arrow a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="settings-container">
+    <h1>SETTINGS</h1>
+    
+    <div id="musicToggle" class="toggle">Music: ON</div>
+    <div id="sfxToggle" class="toggle">SFX: ON</div>
+  </div>
+
+  <div class="back-arrow"><a href="gagamba.html">⮌</a></div>
+
+  <script src="audio.js"></script>
+  <script>
+    const musicToggle = document.getElementById("musicToggle");
+    const sfxToggle = document.getElementById("sfxToggle");
+
+    function updateText() {
+      musicToggle.textContent = "Music: " + (isMusicOn() ? "ON" : "OFF");
+      sfxToggle.textContent = "SFX: " + (isSfxOn() ? "ON" : "OFF");
+    }
+    updateText();
+
+    musicToggle.addEventListener("click", () => {
+      toggleMusic();
+      updateText();
+    });
+
+    sfxToggle.addEventListener("click", () => {
+      toggleSfx();
+      updateText();
+    });
+  </script>
+</body>
+</html>

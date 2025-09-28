@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('pictures/background2.png');
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full screen height */
+}
+
+.frame {
+  width: 150%;
+  max-width: 1000px;
+  background: url("pictures/border.png") no-repeat center 82%;
+  background-size: 100% 52%;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* VS Display */
+.vs-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.player-box {
+  text-align: center;
+}
+
+.player-box p {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+.player-box img {
+  width: 120px;
+  height: 120px;
+  background: #444;
+  border: 3px solid white;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.player-box h2 {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+.vs-text {
+  font-size: 6rem;
+  color: yellow;
+  font-weight: bold;
+  text-shadow: 0 0 15px yellow, 0 0 30px orange;
+  align-self: center;
+}
+
+/* Spider Selection Grid */
+.content-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  background: rgba(60, 0, 0, 0.7);
+  border-radius: 15px;  
+}
+
+.spiders {
+  background: #333;
+  border: 2px solid #555;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.spiders img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}     
+
+.spiders:hover {
+  border-color: yellow;
+  transform: scale(1.1);
+}
+
+/* Select Button */
+#selectBtn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 12px 30px;
+  background: maroon;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#selectBtn:hover {
+  background: darkred;
+  transform: scale(1.05);
+}
+
+/* Attack Animation */
+.attack {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-10px, 0); }
+  50% { transform: translate(10px, 0); }
+  75% { transform: translate(-10px, 0); }
+  100% { transform: translate(0, 0); }
+}

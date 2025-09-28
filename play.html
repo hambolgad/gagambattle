@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gagambattle</title>
+  <link rel="stylesheet" href="play-style.css">
+</head>
+<body>
+  <div class="frame">
+
+    <!-- Top VS Display -->
+    <div class="vs-display">
+      <div class="player-box">
+        <h2>Player 1</h2>
+        <img id="player1Image" src="pictures/player1.png" alt="Player 1">
+        <p id="player1Name"></p>
+      </div>
+      <h1 class="vs-text">VS</h1>
+      <div class="player-box">
+        <h2>Player 2</h2>
+        <img id="player2Image" src="pictures/player2.png" alt="Player 2">
+        <p id="player2Name"></p>
+      </div>
+    </div>
+
+    <!-- Spider Selection Grid -->
+    <div class="content-box">
+      <div class="spiders" onclick="chooseSpider('Red Devil','pictures/reddevil.png')">
+        <img src="pictures/reddevil.png" alt="Red Devil">
+      </div>
+      <div class="spiders" onclick="chooseSpider('Kaka Tuldok','pictures/kakatuldok.png')">
+        <img src="pictures/kakatuldok.png" alt="Kaka Tuldok">
+      </div>
+      <div class="spiders" onclick="chooseSpider('Kaka Tiger','pictures/kakatiger.png')">
+        <img src="pictures/kakatiger.png" alt="Kaka Tiger">
+      </div>
+      <div class="spiders" onclick="chooseSpider('Black Knight','pictures/blackknight.png')">
+        <img src="pictures/blackknight.png" alt="Black Knight">
+      </div>
+      <div class="spiders" onclick="chooseSpider('Spiderman','pictures/spiderman.png')">
+        <img src="pictures/spiderman.png" alt="Spiderman">
+      </div>
+      <div class="spiders" onclick="chooseSpider('Kaka Mais','pictures/kakamais.png')">
+        <img src="pictures/kakamais.png" alt="Kaka Mais">
+      </div>
+      <div class="spiders" onclick="chooseSpider('Tagalog Butterfly','pictures/tagalogbutterfly.png')">
+        <img src="pictures/tagalogbutterfly.png" alt="Tagalog Butterfly">
+      </div>
+      <div class="spiders" onclick="chooseSpider('Kaka Kuryente','pictures/kakakuryente.png')">
+        <img src="pictures/kakakuryente.png" alt="Kaka Kuryente">
+      </div>
+      <div class="spiders" onclick="chooseSpider('Black Arrow','pictures/blackarrow.png')">
+        <img src="pictures/blackarrow.png" alt="Black Arrow">
+      </div>
+      <div class="spiders" onclick="chooseSpider('White Fang','pictures/whitefang.png')">
+        <img src="pictures/whitefang.png" alt="White Fang">
+      </div>
+    </div>
+
+    <!-- Select button -->
+    <button id="selectBtn" onclick="lockChoice()">SELECT</button>
+  </div>
+
+  <script src="bigspiders.js"></script>
+</body>
+</html>
